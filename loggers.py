@@ -1,10 +1,13 @@
 import logging
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-def test():
-    logger = logging.getLogger(__name__)
-    logger.warning(" before you ")
+def warning_logger():
+    logger.warning("This is warning")
 
+def info_logger():
+    logger.info("This is information")
 
 def main():
     mylogger = logging.getLogger("my")
